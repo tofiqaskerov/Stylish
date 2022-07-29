@@ -1,0 +1,87 @@
+﻿@model Service
+
+<style>
+    #icons {
+    }
+
+    .myIcon {
+        font-size: 40px;
+        margin-right: 40px;
+        margin-top:10px;
+        color:#1D809F;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Edit" method="post" class="mt-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label">Title</label>
+                    <input asp-for="Title" class="form-control" style="color:#fff;" name="Title" value="@Model.Title" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Subtitle" class="control-label">Subtitle</label>
+                    <input asp-for="Subtitle" class="form-control" style="color:#fff;" name="Subtitle" value="@Model.Subtitle" />
+                    <span asp-validation-for="Subtitle" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Icon" class="control-label">Icon</label>
+                    <input asp-for="Icon" class="form-control" type="text" style="color:#fff;" name="Icon" id="IcoInput" value="@Model.Icon" />
+                    <div id="icons" class="mt-4">
+                        <i tofiq=" fa-mobile" class="myIcon fa-solid fa-mobile"></i>
+                        <i tofiq=" fa-pen" class="myIcon fa-solid fa-pen"></i>
+                        <i tofiq=" fa-thumbs-up" class="myIcon fa-solid fa-thumbs-up"></i>
+                        <i tofiq="fa-hashtag" class="myIcon fa-solid fa-hashtag"></i>
+                       
+                        <i tofiq=" fa-share" class="myIcon fa-solid fa-share"></i>
+                        <i tofiq=" fa-heart" class="myIcon fa-solid fa-heart"></i>
+                        <i tofiq=" fa-camera" class="myIcon fa-solid fa-camera"></i>
+                    </div>
+                    <span asp-validation-for="Icon" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <a class="btn btn-success" href="/dashboard/service">Return Index</a>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+<script>
+    var icons = document.getElementById("icons")
+     var myIcon = document.querySelectorAll(".myIcon")
+     for(let i=0; i<myIcon.length; i++){
+          myIcon[i].onclick = (e)=>{
+                for(let j =0; j<myIcon.length; j++ ){
+                    myIcon[j].style.color = '#1D809F'
+                }
+                myIcon[i].style.color = 'white';
+          }
+     }
+
+     let myInput = document.getElementById("IcoInput")
+     $(document).on('click', '.myIcon', function (e) {
+         myInput.value = e.currentTarget.attributes.tofiq.value
+
+         //this.style.color = "red"
+         //e.style.color = "red"
+         console.log(e.target)
+     });
+</script>
+
+

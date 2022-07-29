@@ -1,0 +1,47 @@
+﻿@model List<Portfolio>
+
+
+@if (ViewBag.portfolioCount < 6)
+{
+    <a class="btn btn-success mt-5 mb-4 " style=" width: 10%;" href="/dashboard/portfolio/create">Create</a>
+}
+
+@if (Model != null)
+{
+    <table class="table table-bordered table-striped table-dark mb-5" style="color: #000;">
+        <tr class="table-light">
+            <th>Id</th>
+            <th>Title</th>
+            <th>Subtitle</th>
+            <th>Image</th>
+            <th>Action</th>
+
+        </tr>
+
+        @foreach (var portfolio in Model)
+        {
+            <tr style="font-weight:500; color:#fff;">
+                <td>@portfolio.Id</td>
+                <td>@portfolio.Title</td>
+                <td style="white-space: pre-wrap">@portfolio.Subtitle</td>
+                <td>
+                    <img src="~/@portfolio.PhotoURL" class="img-fluid" style="border-radius: 0px; width: 200px; height: 100px;" />
+                </td>
+                <td>
+                    <a href="/dashboard/portfolio/edit/@portfolio.Id" class="btn btn-warning btn-md ">Edit</a>
+                    <a href="/dashboard/portfolio/details/@portfolio.Id" class="btn btn-info btn-md">Detail</a>
+                    <a href="/dashboard/portfolio/delete/@portfolio.Id" class="btn btn-danger btn-md">Delete</a>
+                </td>
+            </tr>
+
+        }
+
+    </table>
+}
+else
+{
+    <div class="alert alert-info">Bazada melumat yoxdur</div>
+
+}
+
+

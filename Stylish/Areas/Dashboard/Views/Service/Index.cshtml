@@ -1,0 +1,49 @@
+﻿@model List<Service>
+
+
+@if(ViewBag.serviceCount <= 8)
+{
+    <a class="btn btn-success mt-5 mb-4 " style=" width: 10%;" href="/dashboard/service/create">Create</a>
+}
+
+@if (Model != null)
+{
+
+
+    <table class="table table-bordered table-striped table-dark mb-5" style="color: #000;">
+        <tr class="table-light">
+            <th>Id</th>
+            <th>Title</th>
+            <th>Subtitle</th>
+            <th>Icon</th>
+            <th>Action</th>
+
+        </tr>
+
+        @foreach (var service in Model)
+        {
+            <tr style="font-weight:500; color:#fff;">
+                <td>@service.Id</td>
+                <td>@service.Title</td>
+                <td style="white-space: pre-wrap">@service.Subtitle</td>
+                <td>
+                    <i class="@service.Icon fa-solid " style="font-size: 30px; color:#1D809F;"></i>
+                </td>
+                <td>
+                    <a href="/dashboard/service/edit/@service.Id" class="btn btn-warning btn-md ">Edit</a>
+                    <a href="/dashboard/service/details/@service.Id" class="btn btn-info btn-md">Detail</a>
+                    <a href="/dashboard/service/delete/@service.Id" class="btn btn-danger btn-md">Delete</a>
+                </td>
+            </tr>
+        }
+
+
+
+
+    </table>
+
+}
+else
+{
+    <div class="alert alert-info">Bazada melumat yoxdur</div>
+}

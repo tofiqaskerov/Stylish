@@ -1,0 +1,41 @@
+﻿@model Portfolio
+
+
+
+<form enctype="multipart/form-data" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="input-group my-2">
+                <input value="@Model.Title" name="Title" id="title" style="color:white;" class="form-control" type="text" placeholder="Title" />
+            </div>
+            <div class="input-group my-2">
+                <input value="@Model.Subtitle" name="Subtitle" id="title" style="color:white;" class="form-control" type="text" placeholder="Subtitle" />
+            </div>
+
+            @ViewBag.PhotoError
+            <div class="input-group my-2">
+                <input name="NewPhoto" accept=".jpg" id="title" class="form-control" type="file" placeholder="PhotoURL" />
+                <br />
+
+                <input type="hidden" name="oldPhoto" value="@Model.PhotoURL" />
+            </div>
+        </div>
+        <div class="input-group my-2">
+            <div class="card">
+                <div class="card-body">
+                    <br />
+                    <img height="200" src="~/@Model.PhotoURL" />
+                </div>
+            </div>
+
+
+        </div>
+        <input type="submit" class="btn btn-primary" value="Save" />
+        <div class="mb-5 mt-3">
+            <a class="btn btn-success" href="/dashboard/portfolio">Return Index</a>
+        </div>
+    </div>
+</form>
+
+
+

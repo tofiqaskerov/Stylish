@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stylish", "Stylish\Stylish.csproj", "{157BE61F-3FF1-4BCB-AEC0-DD4D7096DFED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{157BE61F-3FF1-4BCB-AEC0-DD4D7096DFED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157BE61F-3FF1-4BCB-AEC0-DD4D7096DFED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157BE61F-3FF1-4BCB-AEC0-DD4D7096DFED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157BE61F-3FF1-4BCB-AEC0-DD4D7096DFED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABB64792-6640-49FD-B0D7-6A71D5CB2F7F}
+	EndGlobalSection
+EndGlobal

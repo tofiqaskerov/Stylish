@@ -1,0 +1,33 @@
+﻿<form method="post" class="mt-5 mb-3">
+    <div class="container">
+        <div class="row">
+            <div class="input-group my-2">
+                <input name="Title" id="title" class="form-control" type="text" style="color: #fff;" placeholder="Title" />
+            </div>
+            <div class="input-group my-2">
+                <input name="Subtitle" id="title" class="form-control" type="text" style="color: #fff; " placeholder="Subtitle" />
+            </div>
+            <div  class="input-group my-2">
+                <label for="BgColor">Select Color</label>
+            </div>
+
+            <div class="input-group my-2" style="width:150px; ">
+
+                <input style="height: 50px; width:150px;" name="BgColor" id="title" class="form-control" type="color" placeholder="Background Color" />
+            </div>
+            <div class="input-group my-2">
+                <input type="submit" class="btn btn-success d-block " value="Create" />
+            </div>
+            <div class="mb-5">
+                <a class="btn btn-success" href="/dashboard/about">Return Index</a>
+            </div>
+            <div class="input-group my-2">
+                 <h4 style="color:red;"> @ViewBag.Error </h4>
+            </div>
+           
+            
+           
+        </div>
+    </div>
+</form>
+

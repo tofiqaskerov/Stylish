@@ -1,0 +1,49 @@
+﻿@model Banner
+
+
+@if (Model  == null)
+{
+    <a class="btn btn-success mt-5 mb-4 " style = " width: 10%;" href="/dashboard/banner/create">Create</a>
+}
+
+
+
+@if (Model != null)
+{
+
+
+    <table  class="table table-bordered table-striped table-light mb-5" style = "color: #000;">
+        <tr class = "table-light">
+            <th>Id</th>
+            <th>Title</th>
+            <th>Subtitle</th>
+            <th>Image</th>
+            <th>Action</th>
+
+        </tr>
+
+
+        <tr style = "font-weight:500">
+            <td>@Model.Id</td>
+            <td>@Model.Title</td>
+            <td>@Model.Subtitle</td>
+            <td >
+                <img src="~/@Model.PhotoURL"  class="img-fluid" style="border-radius: 0px; width: 200px; height: 100px;" />
+            </td>
+            <td>
+                <a href="/dashboard/banner/edit/@Model.Id" class="btn btn-warning btn-md ">Edit</a>
+                <a href="/dashboard/banner/details/@Model.Id" class="btn btn-info btn-md">Detail</a>
+                <a href="/dashboard/banner/delete/@Model.Id" class="btn btn-danger btn-md">Delete</a>
+            </td>
+        </tr>
+
+
+
+    </table>
+
+}
+else
+{
+    <div class = "alert alert-info">Bazada melumat yoxdur</div>
+}
+

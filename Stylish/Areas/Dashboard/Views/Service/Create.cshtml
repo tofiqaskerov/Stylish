@@ -1,0 +1,71 @@
+﻿<style>
+    #icons {
+    }
+
+    .myIcon {
+        font-size: 40px;
+        margin-right: 40px;
+        margin-top: 10px;
+        color:#1D809F;
+    }
+</style>
+
+<form method="post" class="mt-5 mb-3">
+    <div class="container">
+        <div class="row">
+            <div class="input-group my-2">
+                <input name="Title" id="title" class="form-control" type="text" style="color: #fff;" placeholder="Title" />
+            </div>
+            <div class="input-group my-2">
+                <input name="Subtitle" id="title" class="form-control" type="text" style="color: #fff; " placeholder="Subtitle" />
+            </div>
+
+            <div class="input-group my-2">
+                <input name="Icon" id="IcoInput" class="form-control" type="text" placeholder="Icon" />
+            </div>
+            <div id="icons">
+                <i tofiq=" fa-mobile" class="myIcon fa-solid fa-mobile"></i>
+                <i tofiq=" fa-pen" class="myIcon fa-solid fa-pen"></i>
+                <i tofiq=" fa-thumbs-up" class="myIcon fa-solid fa-thumbs-up"></i>
+                <i tofiq="fa-hashtag" class="myIcon fa-solid fa-hashtag"></i>
+
+                <i tofiq=" fa-share" class="myIcon fa-solid fa-share"></i>
+                <i tofiq=" fa-heart" class="myIcon fa-solid fa-heart"></i>
+                <i tofiq=" fa-camera" class="myIcon fa-solid fa-camera"></i>
+            </div>
+            <div class="input-group my-2">
+                <input type="submit" class="btn btn-success d-block " value="Create" />
+            </div>
+            <div class="mb-6">
+                <a class="btn btn-success" href="/dashboard/service">Return Index</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+<script>
+    var icons = document.getElementById("icons")
+     var myIcon = document.querySelectorAll(".myIcon")
+     for(let i=0; i<myIcon.length; i++){
+          myIcon[i].onclick = (e)=>{
+                for(let j =0; j<myIcon.length; j++ ){
+                    myIcon[j].style.color = '#1D809F'
+                }
+                myIcon[i].style.color = 'white';
+          }
+     }
+
+     let myInput = document.getElementById("IcoInput")
+     $(document).on('click', '.myIcon', function (e) {
+         myInput.value = e.currentTarget.attributes.tofiq.value
+
+         //this.style.color = "red"
+         //e.style.color = "red"
+         console.log(e.target)
+     });
+</script>
+
