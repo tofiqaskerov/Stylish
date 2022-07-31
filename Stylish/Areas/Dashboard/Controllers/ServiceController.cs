@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Stylish.Data;
 using Stylish.Models;
 
 namespace Stylish.Areas.Dashboard.Controllers
 {
     [Area("dashboard")]
+
+    
     public class ServiceController : Controller
     {
         private readonly AppDbContext _context;
@@ -14,7 +17,7 @@ namespace Stylish.Areas.Dashboard.Controllers
             _context = context;
         }
 
-        public ActionResult Index()
+        public IActionResult Index()
         {
             var serviceCount = _context.Services.Count();
             ViewBag.serviceCount = serviceCount;
@@ -35,6 +38,7 @@ namespace Stylish.Areas.Dashboard.Controllers
 
             return View(service);
         }
+       
 
         [HttpGet]
         public ActionResult Create()

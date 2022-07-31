@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Stylish.Data;
 using Stylish.Models;
@@ -6,6 +7,8 @@ using Stylish.Models;
 namespace Stylish.Areas.Dashboard.Controllers
 {
     [Area("dashboard")]
+  
+
     public class PortfolioController : Controller
     {
         private readonly AppDbContext _context;

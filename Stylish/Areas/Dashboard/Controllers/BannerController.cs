@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Stylish.Data;
 using Stylish.Models;
 
 namespace Stylish.Areas.Dashboard.Controllers
 {   [Area("dashboard")]
+    [Authorize]
     public class BannerController : Controller
     {
         private readonly AppDbContext _context;
@@ -13,6 +15,7 @@ namespace Stylish.Areas.Dashboard.Controllers
         {
             _context = context;
         }
+      
 
         public ActionResult Index()
         {

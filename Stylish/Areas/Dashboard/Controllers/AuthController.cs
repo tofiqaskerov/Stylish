@@ -7,6 +7,7 @@ using Stylish.Models;
 namespace Stylish.Areas.Dashboard.Controllers
 {
     [Area("dashboard")]
+    
     public class AuthController : Controller
     {
        
@@ -36,7 +37,7 @@ namespace Stylish.Areas.Dashboard.Controllers
             Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, model.Password, false,false);
             if (result.Succeeded)
             {
-               return RedirectToAction("Index", "Home");
+               return RedirectToAction("Index","Home");
             }
             return View();
 

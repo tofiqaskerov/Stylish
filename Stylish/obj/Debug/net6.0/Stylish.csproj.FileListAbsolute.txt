@@ -269,6 +269,5 @@ E:\Compar.Academy\csharp\Web\Stylish\Stylish\bin\Debug\net6.0\Microsoft.AspNetCo
 E:\Compar.Academy\csharp\Web\Stylish\Stylish\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 E:\Compar.Academy\csharp\Web\Stylish\Stylish\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 E:\Compar.Academy\csharp\Web\Stylish\Stylish\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
-E:\Compar.Academy\csharp\Web\Stylish\Stylish\bin\Debug\net6.0\libman.json
 E:\Compar.Academy\csharp\Web\Stylish\Stylish\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 E:\Compar.Academy\csharp\Web\Stylish\Stylish\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
