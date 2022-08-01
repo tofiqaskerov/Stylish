@@ -57,11 +57,15 @@ namespace Stylish.Areas.Dashboard.Controllers
                 Email = model.Email,
                 FullName = model.FirstName + " " + model.LastName,
             };
-            IdentityResult result = await _userManager.CreateAsync(user, model.Password);
-            if (result.Succeeded)
+            if(model.Password == model.PasswordRepead)
             {
-                return RedirectToAction("Login");
+                IdentityResult result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Login");
+                }
             }
+           
 
             return View();
         }
